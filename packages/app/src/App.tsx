@@ -3,6 +3,7 @@ import { greet } from "qwasm";
 
 const App: FC = () => {
   useEffect(() => {
+    console.log("asdfa");
     greet();
   }, []);
   return <div> HW</div>;
