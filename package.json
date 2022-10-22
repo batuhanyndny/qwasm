@@ -1,0 +1,16 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "lib/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build:qwasm": "lerna run build --scope=qwasm-src",
+    "dev": "lerna run dev --scope=app"
+  },
+  "devDependencies": {
+    "lerna": "^6.0.1"
+  }
+}

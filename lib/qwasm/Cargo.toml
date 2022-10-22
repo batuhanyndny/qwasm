@@ -1,0 +1,22 @@
+[package]
+name = "qwasm"
+version = "0.1.0"
+edition = "2021"
+authors = ["Batuhan Yenidunya <yenidnya@amazon.co.uk>"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2.63"
+wee_alloc = { version = "0.4.5", optional = true }
+console_error_panic_hook = { version = "0.1.6", optional = true }
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.13"
+
+[profile.release]
+opt-level = "s"
+
+[features]
+default = ["console_error_panic_hook", "wee_alloc"]

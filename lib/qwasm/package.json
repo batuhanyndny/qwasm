@@ -1,0 +1,11 @@
+{
+	"name": "qwasm-src",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"main": "pkg/",
+	"scripts": {
+		"build": "wasm-pack build --out-dir ../../packages/qwasm && yarn update:gitignore",
+		"update:gitignore": "echo \"*\n!README.md\n!.gitignore\" > ../../packages/qwasm/.gitignore"
+	}
+}
