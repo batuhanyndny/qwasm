@@ -10,12 +10,11 @@ I intend to build a quantum simulation toolkit with rust and run the compute hea
 - You need `rust`, `cargo`, `wasm-pack`
 	- [rust and cargo](https://www.rust-lang.org/tools/install)
 	- [wasm-pack](https://rustwasm.github.io/docs/wasm-pack/)
-- `node` and `yarn`
+- `node`
 	- [node](https://nodejs.org/en/download/)
-	- [yarn](https://yarnpkg.com/getting-started/install)
 
 # Usage
 
-- Bootstrap packages using `yarn bootstrap`
-- Build rust code with `wasm-pack` using `yarn build:qwasm`
-- Run React app with `yarn dev`
+- Bootstrap packages using `npm run bootstrap`
+- Build rust code with `wasm-pack` using `npm run build:qwasm`
+- Run React app with `npm run dev`
