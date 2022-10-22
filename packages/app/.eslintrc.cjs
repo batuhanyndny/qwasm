@@ -1,7 +1,7 @@
 module.exports = {
-  extends: ["eslint-config-qwasm"],
+  extends: ["@qwasm/eslint-config"],
   parserOptions: {
     project: "tsconfig.json",
-    tsconfigRootDir: __dirname,
-  },
+    tsconfigRootDir: __dirname
+  }
 };
