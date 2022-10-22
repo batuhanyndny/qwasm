@@ -9,7 +9,8 @@
     "bootstrap": "lerna bootstrap",
     "build:qwasm": "lerna run build --scope=qwasm-src",
     "dev": "lerna run dev --scope=app",
-    "lint:app": "eslint packages/app/src/* --fix"
+    "lint:app": "eslint packages/app/src/* --fix",
+    "format:app": "prettier --write packages/app/src/*"
   },
   "devDependencies": {
     "lerna": "^6.0.1"
