@@ -10,9 +10,23 @@
     "build:qwasm": "lerna run build --scope=qwasm-src",
     "dev": "lerna run dev --scope=app",
     "lint:app": "eslint packages/app/src/* --fix",
-    "format:app": "prettier --write packages/app/src/*"
+    "format:app": "prettier --write packages/app/src/*",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
   },
   "devDependencies": {
-    "lerna": "^6.0.1"
+    "husky": "^8.0.1",
+    "lerna": "^6.0.1",
+    "lint-staged": "^13.0.3"
+  },
+  "lint-staged": {
+    "packages/app/**/*.{js,jsx,ts,tsx,json,css}": [
+      "prettier --write",
+      "eslint --fix/"
+    ],
+    "lib/**/!(*-config)/*.{js,jsx,ts,tsx,json,css}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   }
 }
